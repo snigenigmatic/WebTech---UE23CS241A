@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>React 18 App</title>
+    <html>
+      <head>
+        <title>React 18 App</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div id="root"></div>
+        <script type="text/babel">
+          // use createRoot to create a root
+          const root = ReactDOM.createRoot(document.getElementById('root'));
+          const App = () => {
+            return (
+              <div className="heading1">
+                <h1>Hello, React 18!</h1>
+                <br />
+                <button className="button">Click Me</button>
+              </div>
+            );
+          };
+          root.render(<App />);
+        </script>
+      </body>
+    </html>
+  </head>
+</html>

@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title> React</title>
+		
+		<script  src="https://unpkg.com/react@17/umd/react.development.js ">
+		</script>
+		<script  src="https://unpkg.com/react-dom@17/umd/react-dom.development.js">
+		</script>
+		<script  src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js ">
+		</script>
+		
+	</head>
+	<body >
+		 <div id="container"></div>
+		 <script type="text/babel">
+var dest= document.querySelector("#container");
+			
+class Helloworld extends React.Component {
+	render(){
+		return<div> {this.props.children}
+<h1 style={{color:"red",backgroundColor:"blue"}}> Hello {this.props.var1}</h1></div>
+	}	
+}
+			
+ReactDOM.render(
+	<div>
+<Helloworld >Value of Child-1</Helloworld>
+		<Helloworld var1="PESU-2"/>
+	</div>,
+	dest
+);
+		 
+		 </script>
+		 
+    </body>
+</html>
+
+
+
+

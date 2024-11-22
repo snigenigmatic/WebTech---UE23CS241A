@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title> Promise</title>
+		<script>
+		
+		var date=new Promise(
+			function(resolve,reject){
+				weather=true
+				if(weather){
+					const dateDetails={
+						name:'Sutta Gally',
+						location:'1st street',
+						Shop:5
+					}
+						resolve(dateDetails)
+				}
+				else
+					reject(new Error('Bad weather'))
+				})
+			
+			date
+				.then (function(details){
+					console.log(details);
+					console.log("Yay! Going on a date");
+				})
+							
+				.catch (function(error){
+					console.log(error.message)
+				
+				})
+		
+		
+	   </script>
+		
+	</head>
+	<body >
+		
+    </body>
+</html>

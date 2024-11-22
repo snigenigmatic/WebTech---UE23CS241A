@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+:root{
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-dark-color: #10121A;
+    --background-dark-grey: #191D2B;
+    --border-color: #2e344e;
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: rgba(3, 108, 255, 0.29);
+    --white-color: #FFF;
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
+    --sidebar-dark-color: #191D2B;
+    --font-family:'Roboto', sans-serif;
+}
+ 
+body{
+    font-family:var(--font-family);
+    background-color: var(--background-dark-color);
+}
+
+.heading1{
+    color: var(--font-light-color);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align:center;
+    padding-top:1rem;
+}
+
+.button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+/* box shadow in all four directions */
+    box-shadow: 2px 2px 5px rgba(236, 235, 235, 0.2);
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 2px 2px 5px rgba(64, 223, 117, 0.2);
+}
+
+.button:active{
+    transform: translateY(2px);
+    background-color: var(--background-light-color-2);
+}
+

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>XHR</title>
+    </head>
+    <script>
+	
+        function loaddata(){
+            let xhr=new XMLHttpRequest();
+            xhr.open("get","sample.txt",true);
+            xhr.onreadystatechange=showdata;
+            xhr.responseType="text";
+            xhr.send();
+        }
+			
+function showdata(){
+    if(this.readyState==4&&this.status==200){	
+	document.querySelector("#container").innerHTML=this.responseText
+    }
+}
+		
+    </script>
+    <body>
+        <button onclick="loaddata()">Load Data</button>
+		
+        <div id="container"></div>
+    </body>
+</html>
+
+
+
+
+

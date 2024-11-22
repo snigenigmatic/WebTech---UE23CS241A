@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>React</title>
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX transformation in the browser -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    
+    <script type="text/babel">
+      // Get reference to the container div
+      var dest = document.querySelector("#container");
+
+      // Render an H1 element into the container
+      ReactDOM.render(
+        <h1>React World</h1>,
+        dest
+      );
+    </script>
+  </body>
+</html>
+
+
+
+React-18
+
+<html>
+  <head>
+    <title>React</title>
+    <!-- React and ReactDOM for React 18 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX transformation in the browser -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+      // Get reference to the container div
+      const container = document.querySelector("#container");
+
+      // Create a root and render an H1 element into the container
+      const root = ReactDOM.createRoot(container);
+      root.render(<h1>React World</h1>);
+    </script>
+  </body>
+</html>
+

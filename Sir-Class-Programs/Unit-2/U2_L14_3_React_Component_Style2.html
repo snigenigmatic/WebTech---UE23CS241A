@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title> React</title>
+		<script crossdomain src="https://unpkg.com/react@17/umd/react.development.js ">
+		</script>
+		<script crossdomain src="https://unpkg.com/react-dom@17/umd/react-dom.development.js">
+		</script>
+		<script crossdomain src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js ">
+		</script>	
+	</head>
+	<body >
+		 <div id="container"></div>
+		<script type="text/babel">
+		 var des=document.querySelector("#Container");
+		 // Different backgroundcolor is assigned to each letter using attribute bgcolor.The background color can be passed to component using this.props.bgcolor.
+			class Letter extends React.Component{
+				render(){
+					var letterstyle={
+						backgroundColor:this.props.bgcolor,
+						color:"#333",
+						display:"inline-block",
+						padding:"25px",
+						margin:"25px"
+					}
+					return <div style={ letterstyle}>
+							{this.props.children}
+						 </div>;
+					/*React.createElement("div",{style:letterstyle},
+						{this.props.children})*/
+				}		 
+			}
+			ReactDOM.render(
+				<div>
+					<Letter bgcolor="#58B3FF">A</Letter>
+					<Letter bgcolor="#FF605F">E</Letter>
+					<Letter bgcolor="#FFD52E">I</Letter>
+					<Letter bgcolor="#49DD8E">O</Letter>
+					<Letter bgcolor="#AE99FF">U</Letter>
+
+				</div>,
+				des
+			)
+		 </script>
+		 
+    </body>
+</html>

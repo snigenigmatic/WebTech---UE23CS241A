@@ -1,0 +1,69 @@
+<!-- React -->
+<!-- MERN 
+  react(web), ->front end...
+  express.js node.js(server)
+  mongoDB(database)
+
+  React, r.dom, babel
+  3 links, ->react, reactdom,babel,
+  
+REACT
+   ==fetching react libraries, 
+REACT DOM
+   ==intermediary,connects browser and code, 
+BABEL
+   ==browser wont understand all this jsx code and babel helps browser understand this is js pls execute it(all browser versions always supported woth babel)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+we are using react 18 now... before had been react 17
+
+we will be using stateful, not stateless... 
+cant use backend or store with stateless... 
+prop==properties
+in js if we yse react cant use tags
+to make elements we have to do react.createelement("h1",null,"batman")
+but if its jsx then we can just directly use tags <h1>batman</h1>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body{
+          background-color: rgb(163, 216, 196);
+      }
+      #root{
+          text-align: center;
+          color:white;
+      }
+      #lol{
+          color:red;
+      }
+    </style>
+    <title>REACT-START</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      //using the new root api from react18
+      const root=ReactDOM.createRoot(document.getElementById('root'));
+
+      root.render(<h1>Welcome to REACTJS</h1>);
+    </script>
+
+    <!--class-2 CLASS-REACT-RENDER,STYLING-->
+    <div id="container"></div>
+    <div id="container2"></div>
+    <div id="letters"></div>
+    <script src="script.js" type="text/babel"></script>
+  </body>
+</html>

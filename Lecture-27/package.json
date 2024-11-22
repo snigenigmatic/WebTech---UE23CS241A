@@ -1,0 +1,14 @@
+{
+  "dependencies": { "chalk": "^2.4.2", "react": "^18.3.1" },
+  "type": "module",
+  "name": "lecture-27",
+  "version": "1.0.0",
+  "description": "just trying it out",
+  "main": "node-trial.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node-trial.js"
+  },
+  "author": "Kaustubh",
+  "license": "MIT"
+}

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>XML</title>
+</head>
+<body>
+    <p id="demo1"></p>
+	<p id="demo2"></p>
+    
+    <script>
+        // XML string
+var text = "<bookstore>" + "<book>" + "<title>Italian-1</title>" + "<title>Italian-2</title>" +
+"<author>PESU</author>" + "<year> 2005</year>" +
+"</book>" + "</bookstore>";		
+			
+var parser = new DOMParser();
+var xmlDOM = parser.parseFromString(text, "text/xml");
+        
+var title = xmlDOM.getElementsByTagName("title")[0];
+		
+if (title) {
+    title.textContent += "-Modified"; 
+    document.getElementById("demo1").innerText = title.textContent;
+}
+		
+var sel = new XMLSerializer();
+var sXML = sel.serializeToString(xmlDOM);
+		
+document.getElementById("demo2").innerText = sXML;
+	
+    </script>  
+</body>
+</html>

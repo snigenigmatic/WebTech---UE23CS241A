@@ -1,0 +1,81 @@
+<!--Inline Event-->
+<!--
+<html>
+<body>
+
+
+<h1 onclick="document.getElementById('demo').innerHTML=Date()" >The time is?</h1>
+<p id="demo"></p>
+
+
+
+<button onclick="func1()" ondblclick="func2()"onmouseout="func3()">The time is?</button>
+	<h1 id="demo1"></h1><br><br>
+	<p id="demo2"></p><br><br>
+	<h3 id="demo3"></h3><br><br>
+<script>
+		function func1(){
+			document.getElementById('demo1').innerHTML=Date()
+		}
+		function func2(){
+			document.getElementById('demo2').innerHTML=Date()
+		}
+		function func3(){
+			document.getElementById('demo3').innerHTML=Date()
+		}
+</script>
+</body>
+</html>
+
+-->
+-----------------------------------------------
+
+
+
+<html>
+<body>
+
+<p>Click anywhere in the document to display "Hello World!".</p>
+
+<p id="demo">Click here</p>
+
+<script>
+document.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World!";
+});
+</script>
+
+</body>
+</html>
+
+
+----------------------------------------------------
+
+<!--Remove Listener
+
+<html>
+<body>
+
+
+<p>Click "Remove" to remove the event handler.</p>
+
+<button onclick="removeHandler()">Remove</button>
+
+<p id="demo"></p>
+
+<script>
+	document.addEventListener("mousemove", myFunction);
+
+		function myFunction() {
+		  document.getElementById("demo").innerHTML = Math.random(); //Using Math function
+		}
+
+	function removeHandler() {
+	  document.removeEventListener("mousemove", myFunction);
+	}
+</script>
+
+</body>
+</html>
+
+-->

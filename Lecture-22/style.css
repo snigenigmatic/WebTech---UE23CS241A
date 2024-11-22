@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #A0522D;
+    --tertiary-color: #D2691E;
+    --quaternary-color: #CD853F;
+    --quinary-color: #DEB887;
+    --senary-color: #F4A460;
+    --septenary-color: #D2B48C;
+    --octonary-color: #BC8F8F;
+    --nonary-color: #8B0000;
+    --denary-color: #A52A2A;
+    --light-color: #FFE4C4;
+    --dark-color: #2F4F4F;
+    --light-gray: #D3D3D3;
+    --gray: #A9A9A9;
+    --dark-gray: #696969;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-family: "Open Sans", sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+    --border-radius: 4px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.countup, .countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+.para1{
+    padding: 25px;
+    border:5px solid grey;
+    margin: 15px;
+    background-color: mediumorchid ;
+    color: white;
+    position: static;
+    left: 100px;
+}
+
+.para2{
+    padding: 25px;
+    border:5px solid grey;
+    margin: 15px;
+    background-color: mediumorchid ;
+    color: white;
+    position: relative;
+    left: 100px;
+}
+
+.para3{
+    padding: 25px;
+    border:5px solid grey;
+    margin: 15px;
+    background-color: mediumorchid ;
+    color: white;
+    position: absolute;
+    right: 0px;
+}
+
+.para4{
+    padding: 25px;
+    border:5px solid grey;
+    margin: 15px;
+    background-color: mediumorchid ;
+    color: white;
+    position: fixed;
+    right: 0px;
+}
+
+.para5{
+    padding: 25px;
+    border:5px solid grey;
+    margin: 15px;
+    background-color: red ;
+    color: white;
+    position: sticky;
+    top: 20px;
+    text-shadow: 5px 5px 5px rgba(45,54,22,0.5)
+}
+
+body{
+    background-image: url("download.jpeg");
+    background-repeat:no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 50%;
+    background-attachment: fixed;
+}
+
+h1{
+    /* add text shadow */
+    text-shadow: 2px 2px 4px rgba(182, 20, 20, 0.5);
+}

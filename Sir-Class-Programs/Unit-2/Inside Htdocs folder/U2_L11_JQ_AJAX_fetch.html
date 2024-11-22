@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title> Fetch</title>
+		<script src="jquery-3.7.1.js">
+		</script>
+		<script>
+		
+		
+function fetchdata(){
+	mydiv=document.querySelector("#container");
+				
+	fetch('sample.txt')
+	.then(function(response1){
+		return response1.text();
+	})
+	.then(function(response1){
+		mydiv.innerHTML=response1;
+	})
+	.catch(function(error){
+		console.log(error.message);
+	})
+}
+				
+		
+	   </script>
+		
+	</head>
+	<body >
+	<button onclick="fetchdata()">Fetch Data</button>
+	<div id="container"></div>
+		
+    </body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  /* Futuristic Color Palette */
+  --primary-color: #00ffff;
+  --secondary-color: #ff00ff;
+  --background-color: #0a0a0a;
+  --text-color: #ffffff;
+  --accent-color: #7fff00;
+  --active-color: #ff4500;
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --base-font-size: 16px;
+  --heading-font-size: 2rem;
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  /* Effects */
+  --glow-effect: 0 0 10px var(--primary-color);
+  --transition-speed: 0.9s;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-shadow: var(--glow-effect);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  box-shadow: var(--glow-effect);
+  border-radius: 5px;
+  margin: var(--spacing-large);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-medium);
+}
+
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  
+.box:hover {
+  width: 200px;
+  background-color: red;
+  padding-top: 40px;
+  line-height: 50px;
+}

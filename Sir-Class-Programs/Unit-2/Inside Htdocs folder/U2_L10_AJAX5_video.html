@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>XHR Video Example</title>
+		<script>
+		function getvideo() {
+			let xhr = new XMLHttpRequest();
+			xhr.open("GET", "Avengers.mp4", true);
+			
+			// Set the response type to blob (binary data)
+			xhr.responseType = "blob";
+			
+			// Set up the callback to handle the response
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					showdata(xhr);
+				}
+			};
+
+			// Send the request
+			xhr.send();
+		}
+
+		function showdata(xhr) {
+			console.log("In showdata");
+
+			// Check if the request is successful
+			if (xhr.status == 200) {
+				console.log("Video fetched successfully");
+				
+				// Create a video element and assign the blob URL to its source
+				let videoElement = document.createElement("video");
+				
+				videoElement.src = URL.createObjectURL(xhr.response); // Create URL for the video blob
+				videoElement.controls = true; // Enable video controls (play, pause, etc.)
+				videoElement.width = 500; // Set video width to 500px
+
+				// Append the video element to the container
+				document.querySelector("#container").appendChild(videoElement);
+			} else {
+				console.log("Failed to load video. Status:", xhr.status);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<button onclick="getvideo()">Get Video</button>
+		<div id="container"></div>
+	</body>
+</html>

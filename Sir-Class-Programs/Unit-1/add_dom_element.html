@@ -1,0 +1,52 @@
+<html>
+<body>
+
+	<ul id="l1">
+	  <li>apple</li>
+	  <li>banana</li>
+	</ul>
+
+	<button onclick="myFunction()">Add</button>
+
+	<script>
+		function myFunction() {
+
+			const node1 = document.createElement("li");
+
+			const textnode1 = document.createTextNode("Kiwi");
+
+			node1.appendChild(textnode1);
+
+			document.getElementById("l1").appendChild(node1);
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+--------------------------------------------------------
+
+
+<html>
+<body>
+
+	<ul id="l1">
+	  <li>apple</li>
+	  <li>banana</li>
+	</ul>
+
+	<script>
+		const node2 = document.createElement("li");
+
+		const textnode2 = document.createTextNode("Kiwi");
+		
+		node2.appendChild(textnode2);
+
+		const list = document.getElementById("l1");
+		list.insertBefore(node2, list.children[0]);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title> React</title>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js ">
+		</script>
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+		</script>
+		<script crossdomain src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js ">
+		</script>	
+	</head>
+	<body >
+		 <div id="container"></div>
+		<script type="text/babel">
+		 var des=document.querySelector("#Container");
+		 //display="inline-block" -  Does not add line break after the element, so the element can sit next to other elements
+		 //display="none" - hide the element
+			class Letter extends React.Component{
+				render(){
+					var letterstyle={
+						backgroundColor:this.props.bgcolor,
+						color:"#333",
+						display:this.props.display,
+						padding:"25px",
+						margin:"25px"
+					}
+					return <div style={ letterstyle}>
+							{this.props.children}
+						 </div>;
+					/*React.createElement("div",{style:letterstyle},
+						{this.props.children})*/
+				}		 
+			}
+			ReactDOM.render(
+				<div>
+					<Letter display="inline-block" bgcolor="#58B3FF">A</Letter>
+					<Letter display="inline-block" bgcolor="#FF605F">E</Letter>
+					<Letter display="inline-block" bgcolor="#FFD52E">I</Letter>
+					<Letter display="inline-block" bgcolor="#49DD8E">O</Letter>
+					<Letter display="inline-block" bgcolor="#AE99FF">U</Letter>
+
+				</div>,
+				des
+			)
+		 </script>
+		 
+    </body>
+</html>

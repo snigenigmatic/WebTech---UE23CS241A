@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <title>Lecture-3</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>Content</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptates. Quisquam, voluptates.
+        </p>
+      </div>
+      <div class="Checkbox">
+        <input type="checkbox" id="check" checked />
+        <label for="check"> Hi, this box is checked </label>
+        <br />
+        <input type="checkbox" id="check" />
+        <label for="check"> Hi, check this box </label>
+      </div>
+      <br /><br />
+      <div class="dropdown">
+        Choose an option
+        <select name="tech_skills" id="TS">
+          <option selected disabled>None</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JS">JavaScript</option>
+          <option value="React">ReactJS</option>
+          <option value="Node">NodeJS</option>
+        </select>
+      </div>
+      <br /><br />
+      <div class="dropdown">
+        Choose an option
+        <select name="tech_skills" id="TS" multiple>
+          <option value="None">None</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JS">JavaScript</option>
+          <option value="React">ReactJS</option>
+          <option value="Node">NodeJS</option>
+        </select>
+      </div>
+      <br /><br />
+      <div class="colour-picker">
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+      </div>
+      <br /><br />
+      <div class="Date-time">
+        <label for="date">Select a date:</label>
+        <input type="date" id="date" name="date" />
+        <br /><br />
+        <label for="time">Select a time:</label>
+        <input type="time" id="time" name="time" />
+      </div>
+      <br /><br />
+      <label for="phone">Contact number</label>
+      <input type="tel" name="phone" id="ph" pattern="[6-9]{1}[0-9]{9}" />
+      <br /><br />
+      <button type="reset" id="reset">Reset the Page</button>
+      <br /><br />
+      <label for="range">Select in the range</label>
+      <input
+        type="range"
+        name="range"
+        id="ran"
+        min="0"
+        max="10"
+        step="1"
+        value="0"
+      />
+      <!-- make initial value zero -->
+      <br /><br />
+      <label for="mail">Enter your email</label>
+      <input type="email" name="mail" id="em" />
+      <br />
+      <label for="pwd">Enter your password</label>
+      <input type="password" name="pwd" id="pw" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      table {
+          width: 100%;
+      }
+      th {
+          background-color: #f2f2f2;
+      }
+      th,
+      td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          text-align: center;
+      }
+      body{
+        width: 75%;
+        margin: 0 auto;
+
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" rowspan="2">Sno</th>
+          <th scope="col" rowspan="2">Course</th>
+          <th scope="col" rowspan="2">Subject</th>
+          <th scope="col" rowspan="1" colspan="2">marks</th>
+          <th scope="col" rowspan="2">Category</th>
+        </tr>
+        <tr>
+          <th scope="col">Theory</th>
+          <th scope="col">Practical</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>BCA</td>
+          <td>Computer</td>
+          <td>70</td>
+          <td>80</td>
+          <td>Science</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>BBA</td>
+          <td>Management</td>
+          <td>60</td>
+          <td>70</td>
+          <td>Commerce</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>BA</td>
+          <td>Arts</td>
+          <td>50</td>
+          <td>60</td>
+          <td>Arts</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      $(document).ready(function () {
+        $("table thead tr th").css("background-color", "lightblue");
+        //loop through eachrow in student table
+        $("table tbody tr").each(function () {
+          //get the marks value
+          var theory = $(this).find("td:nth-child(4)").text();
+          var practical = $(this).find("td:nth-child(5)").text();
+          //apply background color based on marks
+          if (theory >= 70 && practical >= 70) {
+            $(this).css("background-color", "green");
+          } else if (theory >= 60 && practical >= 60) {
+            $(this).css("background-color", "yellow");
+          } else if (theory >= 50 && practical >= 50) {
+            $(this).css("background-color", "orange");
+          } else {
+            $(this).css("background-color", "red");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>XML</title>
+  </head>
+  <body>
+    <h1>XML</h1>
+    <div id="error"></div>
+    <br />
+    <div id="success"></div>
+    <script src="practice.js"></script>
+  </body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Student Data</h1>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>SRN</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>John Doe</td><td>20</td><td>Computer Science</td></tr>
+            <tr><td>2</td><td>Jane Smith</td><td>22</td><td>Mathematics</td></tr>
+            <tr><td>3</td><td>David Lee</td><td>21</td><td>Physics</td></tr>
+            <tr><td>4</td><td>Sarah Kim</td><td>23</td><td>Chemistry</td></tr>
+            <tr><td>5</td><td>Chris Evans</td><td>22</td><td>Biology</td></tr>
+            <tr><td>6</td><td>Emma Stone</td><td>20</td><td>Literature</td></tr>
+            <tr><td>7</td><td>Robert Brown</td><td>19</td><td>Philosophy</td></tr>
+            <tr><td>8</td><td>Lisa White</td><td>21</td><td>Economics</td></tr>
+            <tr><td>9</td><td>Tom Holland</td><td>23</td><td>History</td></tr>
+            <tr><td>10</td><td>Susan Taylor</td><td>22</td><td>Political Science</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            // Loop through each row in the table body
+            $("#studentTable tbody tr").each(function() {
+                // Get the SRN value (first cell in the row)
+                var srn = $(this).find('td:first').text();
+
+                // Apply background color based on whether SRN is odd or even
+                if (srn % 2 == 0) {
+                    // Even SRN - set background color to pink
+                    $(this).css("background-color", "pink");
+                } else {
+                    // Odd SRN - set background color to yellow
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html> -->

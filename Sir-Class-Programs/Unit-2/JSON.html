@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title> JSON</title>
+		</head>
+	<body>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		
+	<script>
+	  var str= '{"name": "Baaziger", "cast": "Shah Rukh"}';	
+	  
+	  var obj=JSON.parse(str);
+	  
+	  document.getElementById("demo1").innerHTML=obj.name;
+
+
+//--------------------------------------------
+
+	  obj.year="1993"
+	  obj.rating="9.0"
+	  
+	  str=JSON.stringify(obj);
+	  
+	  document.getElementById("demo2").innerHTML=str;
+	 	 
+	</script>  
+</body>
+</html>

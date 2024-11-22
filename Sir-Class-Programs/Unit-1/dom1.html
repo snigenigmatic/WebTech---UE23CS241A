@@ -1,0 +1,42 @@
+<html>
+<body>
+
+	<h1>The Document Object</h1>
+	
+
+	<h2>H2 Tag-1</h2>
+	<h2>H2 Tag-2</h2>
+	<h2>H2 Tag-3</h2>
+
+	
+<p id="demo"> </p>	
+	
+<p class="example">This is a paragraph-1.</p>
+	
+<p class="example">This is a paragraph-2.</p>
+	
+<p>This is a paragraph-3.</p>
+<p>This is a paragraph-4.</p>
+	
+
+
+<script>
+
+document.getElementById("demo").innerHTML = "<br>Hello World-1 <br>";
+
+document.getElementsByClassName("example")[0].innerHTML = "Hello World-2!";
+	
+document.getElementsByTagName("h2")[1].innerHTML = "Hello World!";
+	
+document.querySelector("h2").style.color = "red";
+
+------------------------------------------	
+const nodeList = document.querySelectorAll("h2");
+	for (let i = 0; i < nodeList.length; i++) {
+		nodeList[i].style.backgroundColor = "yellow";
+	}
+	
+</script>
+
+</body>
+</html>

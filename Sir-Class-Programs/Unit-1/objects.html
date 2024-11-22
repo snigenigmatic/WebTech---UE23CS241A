@@ -1,0 +1,83 @@
+<html>
+<body>
+
+<script>
+
+	// Object Literals
+	const college1 = {firstName:"PES", lastName:"University", years:50};
+
+	document.write(college1.firstName + " is " + college1.years + " years old. <br>");
+	
+	
+	
+	
+	
+	// Object using NEW Keyword
+	const college2 = new Object
+	
+	college2.firstName="PES";
+	college2.lastName="University";
+	college2.years=50;
+
+	document.write(college2.firstName + " is " + college2.years + " years old.<br>");
+	
+	
+
+		
+	// Constructor function
+	function Person(first, age, eye) {
+		this.firstName = first;
+		this.age = age;
+		this.eyeColor = eye;
+		this.fullName = function() {
+			document.write("My father is " + this.firstName + ".<br>"); 
+		};
+	}
+const myFather = new Person("John", 50, "blue");
+const myMother = new Person("Sally", 48, "green");
+myFather.fullName();
+	myMother.fullName(); 
+
+	
+	
+	
+	
+	//Anonymous function
+var Person1 = function(first, last, age, eye) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eye;
+		this.fullName = function() {
+			document.write("My father is " + this.firstName + ".<br>"); 
+		};
+	};
+
+	const myFather1 = new Person1("John", "Doe", 50, "blue");
+	const myMother1 = new Person1("Sally", "Rally", 48, "green");
+
+	myFather1.fullName(); 
+	myMother1.fullName(); 
+
+
+
+
+
+	//Objects using Class
+	class Person2{
+		constructor(first, last){
+			this.firstName=first;
+			this.lastName = last;
+		}
+		fullName(){
+			document.write("My father is " + this.firstName + ".<br>"); 
+		}
+	}
+	
+var myFather2 = new Person2("John","Deo");
+myFather2.fullName();
+
+</script>
+
+</body>
+</html>

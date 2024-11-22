@@ -1,0 +1,40 @@
+
+
+<html>
+	<head>
+		<title> Promise</title>
+		<script>
+		
+		var p1=new Promise(
+			function(resolve,reject){
+				const x="abc";
+				const y="abc";
+				
+				
+			if(x===y){
+				resolve();
+			}else {
+				reject();
+			}
+		});
+		
+		
+		
+		p1
+		.then(function (){
+			console.log("Success-1")
+		})
+		.then(function (){
+			console.log("Success-2")
+		})
+		.catch(function (){
+			console.log("Error")
+		}) 
+		
+	   </script>
+		
+	</head>
+	<body >
+		
+    </body>
+</html>
